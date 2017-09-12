@@ -42,7 +42,7 @@
     <Compile Include="Helpers\ObservableObject.cs" />
     <Compile Include="Helpers\ObservableRangeCollection.cs" />
     <Compile Include="Models\BaseDataObject.cs" />
-    <Compile Include="Models\ISqlite.cs" />
+    <Compile Include="ViewModels\ISqlite.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\MiphaClass.cs" />
     <Compile Include="Models\MiphaDbContext.cs" />
