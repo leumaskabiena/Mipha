@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mipha.Views.MainSelection">
+    <ContentPage.Content>
+
+        <StackLayout  BackgroundColor="WhiteSmoke" >
+            <Label Text="Take a New Test" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"                    
+                    Font="Large" />
+            <StackLayout VerticalOptions="FillAndExpand" Padding="5,5,5,10">
+               
+              
+                <Button Text="Human"
+                x:Name="btnhuman"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="Red"
+                Font="Large" />
+
+                <Button Text="Aminal"
+                x:Name="btnanimal"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="Red"
+                Font="Large" />
+
+                <Button Text="Plant"
+                x:Name="btnplant"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="Red"
+                Font="Large" />
+               
+            </StackLayout>
+            <Label Text="List of  "
+                    HorizontalOptions="Center" />
+
+            <StackLayout x:Name="layouthost" IsVisible="False" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"  >
+                <ListView x:Name="listHost" ItemSelected="HandleHost_ItemSelected" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding name }" FontSize="Medium"/>
+                            </StackLayout>
+                            </ViewCell> 
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--<StackLayout Orientation="Horizontal">
+                    <Label Text="Select Condition"></Label>
+                    <Picker x:Name="subtitle"  IsEnabled="True" >
+                        
+                    </Picker>
+                </StackLayout>-->
+            </StackLayout>
+            <StackLayout x:Name="layoutcondition" IsVisible="False" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"  >
+                <Label Text=" this is a list of comdition">
+                    
+                </Label>
+                <ListView x:Name="listCondition" ItemSelected="HandleCondition_ItemSelected" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding name}" FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--<StackLayout Orientation="Horizontal">
+                    <Label Text="Select Condition"></Label>
+                    <Picker x:Name="subtitle"  IsEnabled="True" >
+                        
+                    </Picker>
+                </StackLayout>-->
+            </StackLayout>
+            <StackLayout x:Name="layoutReport" VerticalOptions="Fill" >
+                
+                <Label x:Name="lblsubtile"
+                       Text=" Report a new Case"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"/>
+                <Button x:Name="btncase" 
+                        Text="Report "
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

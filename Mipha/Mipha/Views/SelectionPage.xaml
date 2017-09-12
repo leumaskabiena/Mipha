@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mipha.Views.SelectionPage">
+    <ContentPage.Content>
+
+        <StackLayout  BackgroundColor="WhiteSmoke" >
+            <Label Text="Take a New Test" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"                    
+                    Font="Large" />
+            <StackLayout VerticalOptions="FillAndExpand" Padding="5,5,5,10">
+
+
+                <Button Text="Human"
+                x:Name="btnhuman"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="Red"
+                Font="Large"
+                />
+
+                <Button Text="Aminal"
+                x:Name="btnanimal"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="Red"
+                Font="Large"
+                />
+
+                <Button Text="Plant"
+                x:Name="btnplant"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="Red"
+                Font="Large"
+                />
+
+            </StackLayout>
+            <Label x:Name="lbltitle"
+                    HorizontalOptions="Center" />
+
+            <StackLayout x:Name="layouthost" IsVisible="False" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"  >
+                <ListView x:Name="listHost" ItemSelected="HandleHost_ItemSelected" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Host_Name }" FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--<StackLayout Orientation="Horizontal">
+                    <Label Text="Select Condition"></Label>
+                    <Picker x:Name="subtitle"  IsEnabled="True" >
+                        
+                    </Picker>
+                </StackLayout>-->
+            </StackLayout>
+            <StackLayout x:Name="layoutcondition" IsVisible="False" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"  >
+                <!--<Label Text=" this is a list of comdition">
+
+                </Label>-->
+                <ListView x:Name="listCondition" ItemSelected="HandleCondition_ItemSelected" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Condition_Name}" FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+             
+            </StackLayout>
+            <StackLayout x:Name="layoutReport" VerticalOptions="Center" Orientation="Horizontal" HorizontalOptions="Center" >
+
+                <!--<Label x:Name="lblsubtile"
+                       Text=" Report a new Case"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"/>-->
+                <Button x:Name="btnpre" 
+                        Text="previous "
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        IsEnabled="False"/>
+                <Button x:Name="btnnext" 
+                        Text="Next "
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        IsEnabled="False"/>
+           
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

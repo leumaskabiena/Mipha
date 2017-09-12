@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.Mipha" android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="15" />
+  <application android:label="@string/app_name">
+    <!--<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBNrwV8AuIKCJGzdowZbVDHB1N4dGwUjsU" />-->
+     <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBtrvPhVruz4l3Z8wyP-ej4dAddLs2-J_g" /> 
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+  </application>
+</manifest>
